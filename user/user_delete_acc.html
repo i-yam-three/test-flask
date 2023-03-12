@@ -1,0 +1,53 @@
+{% extends 'user/index-2.html' %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+div.a {
+  text-align: center;
+}
+
+div.b {
+  text-align: left;
+}
+
+</style>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<div class="b" align="left">
+<h1>Delete Your Account</h1>
+
+This will permanently delete your account. Once you type in your password and click the button below, you won't be able to use CRISIS ASSIST anymore.
+<br>
+<br>
+<br>
+This action cannot be undone.
+
+<br>
+<br>
+Enter your password to confirm:
+<form action="" method="post" onsubmit="return confirm('Are you sure to delete?')">
+
+<table width="200" border="3">
+  <tr>
+    <td><input type="password" name="p" required/>&nbsp;</td>
+  
+      <td><input class="button" type="submit" value="Delete"> </td>
+  </tr>
+</table>
+</form>
+
+
+</div>
+
+</body>
+</html>
+{% endblock %}

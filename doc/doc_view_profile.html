@@ -1,0 +1,69 @@
+{% extends 'doc/index-2.html' %}
+{% block body %}
+
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<!--<table width="200" border="3" class="table table-hover" style="font-size:130%">
+  <tr>
+    <th scope="col">Sl no</th>
+    <th scope="col">Patient Name</th>
+    <th scope="col">Contact No</th>
+    <th scope="col">Age</th>
+
+  </tr>
+
+      {% for i in aa %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['name'] }}</td>
+    <td>&nbsp;{{ i['contact_number'] }}</td>
+    <td>{{ i['age']}}</td>
+      <td> <input type="submit" name="button" id="button" value="Check-up Complete" class="btn btn-outline-primary" /> </td>
+  </tr>
+    {% endfor %}
+
+
+</table> -->
+
+<table width="200" border="3" class="table table-hover" style="font-size:130%">
+    {% for i in aa %}
+     <tr>
+    <th scope="row">Sl no</th>
+    <td>{{ loop.index }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Patient name</th>
+    <td>{{ i['name'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Contact no</th>
+    <td>{{ i['contact_number'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Age</th>
+    <td>{{ i['age']}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Action</th>
+    <td><input type="submit" name="button" id="button" value="Check-up Complete" class="btn btn-outline-primary" /> </td>
+  </tr>
+
+    {% endfor %}
+
+</table>
+
+
+</body>
+</html>
+{% endblock %}
+
+-->
+

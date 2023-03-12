@@ -1,0 +1,105 @@
+
+{% extends 'admin/index-2.html' %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script type="application/javascript"
+var $rows = $('#table tr');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+</script>
+
+
+<style>
+
+    body {padding: 20px;}
+input {margin-bottom: 5px; padding: 2px 3px; width: 209px;}
+td {padding: 4px; border: 1px #CCC solid; width: 100px;}
+
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #55ce63;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #55ce63}
+
+.button:active {
+  background-color: #55ce63;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+
+
+
+</head>
+
+<body>
+
+<form action="" method="post">
+<input type="text" name="search" placeholder="Search by hospital"><input type="submit" value="search"/>
+<table id="table" width="200" border="3" class="table table-hover" style="font-size:130%">
+  <tr>
+    <th scope="col">Sl no</th>
+    <th scope="col">Doc Name</th>
+    <th scope="col">Hospital Name</th>
+    <th scope="col">Department</th>
+    <th scope="col">Seniority</th>
+    <th scope="col">Contact no.</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+   <!-- <th scope="col">Shift Timings</th> -->
+  </tr>
+
+    {% for i in aa %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['dname'] }}</td>
+    <td>&nbsp;{{ i['hospital_name'] }}</td>
+    <td>{{ i['department']}}</td>
+    <td>{{ i['seniority']}}</td>
+
+    <td>{{ i['contact_number']}}</td>
+    <!--<td>{{ i['shift_timings']}}</td> -->
+  <td> <a href='/admin_doc_update/{{ i['doc_id'] }}/{{ i['dname'] }}' class="button"> Edit</a> </td>
+  <td> <a href='/admin_doc_delete/{{ i['doc_id'] }}' class="button" onclick="return confirm('Are you sure you want to delete?')"> Delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+
+</form>
+</body>
+</html>
+
+{% endblock %}
+
+
+

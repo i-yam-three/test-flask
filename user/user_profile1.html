@@ -1,0 +1,105 @@
+{% extends 'user/index-2.html' %}
+{% block body %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v6 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/static/assets/css1/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/static/assets/css1/style.css"/>
+
+
+
+    <style>
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;position:absolute; top:0; right:0;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+.button5 {
+  background-color: white;
+  color:  #000000;
+  border: 2px solid #555555;
+}
+</style>
+
+
+
+</head>
+<body class="form-v6">
+	<div class="page-content">
+		<div class="form-v6-content">
+			<div class="form-left">
+
+{#		< img src=" {{ data['doc_image'] }}" alt="form"/>#}
+
+<img src="{{ data['upload_image'] }}" height="100" width="100" alt="Patient image" style="border:3px solid black">
+			</div>
+			<form class="form-detail" action="#" method="post">
+				<h2>Patient Details</h2>
+                <a href='/user_update/{{ data['name'] }}/{{ data['gender'] }}/{{ data['mail_id'] }}' class="button button5"> Update Profile </a>
+           <table width="200" border="3" class="table table-hover" style="font-size:130%">
+
+  <tr>
+    <th scope="row">User Name</th>
+    <td>&nbsp;{{ data['name'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Age</th>
+    <td>&nbsp;{{ data['age'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Gender</th>
+    <td>{{ data['gender'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Address</th>
+    <td> {{ data['building_number'] }} <br> {{ data['road_name'] }} <br> {{ data['city']}} <br> {{  data['state'] }} <br> {{ data['pin_code'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Emergency Contact</th>
+    <td> {{ data['contact_number'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Mail id</th>
+    <td>{{ data['mail_id'] }}</td>
+  </tr>
+</table>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+
+{% endblock %}

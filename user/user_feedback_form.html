@@ -1,0 +1,71 @@
+{% extends 'user/index-2.html' %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="post" action="">
+<table width="200" border="3" class="table table-hover" style="font-size:130%">
+  <tr>
+    <th scope="row">Doctor</th>
+    <td><label for="textfield"></label>
+    {{ data['dname'] }}
+
+    </td>
+  </tr>
+
+
+
+
+<tr>
+    <th scope="row">Rating</th>
+    <td>
+    <label>
+<input type="radio" name="r" value="Your Worst service" id="RadioGroup1_0" />
+Worst</label>
+    <br />
+    <label>
+<input type="radio" name="r" value="Your Bad service" id="RadioGroup1_1" />
+Bad</label>
+    <br />
+    <label>
+<input type="radio" name="r"  id="RadioGroup1_2" />
+Average</label>
+    <br />
+    <label>
+      <input type="radio" name="r" value="Your Good service" id="RadioGroup1_3" checked/>
+      Good</label>
+      <br/>
+    <label>
+<input type="radio" name="r" value="Your Excellent service" id="RadioGroup1_4" />
+Excellent</label>
+    <br />
+</td>
+
+</tr>
+
+
+
+  <tr>
+    <th scope="row">Additional Comments</th>
+    <td><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" class="form-control" cols="45" rows="5" required></textarea></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Submit" class="btn btn-outline-primary"  /></th>
+    </tr>
+</table>
+
+
+</form>
+</body>
+</html>
+
+{% endblock %}

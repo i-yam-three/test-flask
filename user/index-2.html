@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- index22:59-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/assets/img/favicon.ico">
+    <title> CRISIS ASSIST </title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="/static/assets/js/html5shiv.min.js"></script>
+		<script src="/static/assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<div class="header-left">
+				<a href="index-2.html" class="logo">
+					<img src="/static/assets/img/logo.png" width="35" height="35" alt=""> <span>Crisis Assist</span>
+				</a>
+			</div>
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            <ul class="nav user-menu float-right">
+                <li class="nav-item dropdown d-none d-sm-block">
+
+
+
+                <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                        <span class="user-img">
+							<img class="rounded-circle" src="{{ session['image'] }}" width="24" alt="Admin">
+							<span class="status online"></span>
+						</span>
+						<span>{{ session['user'] }}</span>
+                    </a>
+					<div class="dropdown-menu">
+
+						<a class="dropdown-item" href="/logout">Logout</a>
+					</div>
+                </li>
+            </ul>
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+
+
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">DASHBOARD</li>
+
+						<li>
+                            <a href="/user_view_profile"><i class="fa fa-user-circle-o"></i> <span> VIEW PROFILE</span></a>
+                        </li>
+                        <li>
+                            <a href="/dummy_user"><i class="fa fa-file-text-o"></i> <span>VIEW RECORDS</span></a>
+                        </li>
+                        <!--<li>
+                            <a href="#"><i class="fa fa-check-circle-o"></i> <span> TRUST SCORE REPORT </span></a>
+                        </li>
+                        -->
+                        <li>
+                            <a href="/user_audit"><i class="fa fa-handshake-o"></i> <span> TRANSACTION AUDIT </span></a>
+                        </li>
+
+
+                         <li>
+                            <a href="/user_view_feedback_"><i class="fa fa-eye"></i> <span> VIEW FEEDBACK </span></a>
+                        </li>
+
+                        <li>
+                            <a href="/delete_acc"><i class="fa fa-trash-o"></i> <span> DELETE ACCOUNT </span></a>
+                        </li>
+
+                       </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
+
+                    </div>
+                </div>
+				<div class="row">
+					<div class="col-12 col-md-12 col-lg-12 col-xl-12">
+					{% block body %}
+					
+					{% endblock %}	
+                    </div>
+					<div class="col-12 col-md-6 col-lg-6 col-xl-6">
+						<div class="card">
+
+				</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="/static/assets/js/jquery-3.2.1.min.js"></script>
+	<script src="/static/assets/js/popper.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/jquery.slimscroll.js"></script>
+    <script src="/static/assets/js/Chart.bundle.js"></script>
+    <script src="/static/assets/js/chart.js"></script>
+    <script src="/static/assets/js/app.js"></script>
+
+</body>
+
+
+<!-- index22:59-->
+</html>

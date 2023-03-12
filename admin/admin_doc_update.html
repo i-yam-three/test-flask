@@ -1,0 +1,53 @@
+
+{% extends 'admin/index-2.html' %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+
+<form action="" method="post">
+<table width="200" border="3" class="table table-hover" style="font-size:130%">
+  <tr>
+    <th scope="row">Doctor Name</th>
+    <td><label for="textfield1"></label>
+      {{ dname }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Hospital Name</th>
+    <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" required></td>
+  </tr>
+  <tr>
+    <th scope="row">Department</th>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" required></td>
+  </tr>
+  <tr>
+    <th scope="row">Seniority</th>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" required></td>
+  </tr>
+  <tr>
+    <th scope="row">Contact no</th>
+    <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" required pattern="[6-9][0-9]{9}"></td>
+  </tr>
+
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="Update" /></th>
+    </tr>
+  
+</table>
+</form>
+</body>
+</html>
+
+{% endblock %}

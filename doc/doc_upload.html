@@ -1,0 +1,122 @@
+{% extends 'doc/index-2.html'%}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+anc {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+
+</head>
+
+<body>
+
+<table width="200" border="3" class="table table-hover" style="font-size:130%">
+{% if aa %}
+{#  <tr>#}
+{#    <th scope="col">Sl no</th>#}
+{#    <th scope="col">Patient Name</th>#}
+{#    <th scope="col">Contact No</th>#}
+{#    <th scope="col">Upload</th>#}
+{#    <th scope="col">View </th>#}
+{#  </tr>#}
+{##}
+{#    {% for i in aa %}#}
+{#  <tr>#}
+{#    <td>&nbsp;{{ loop.index }}</td>#}
+{#    <td>&nbsp;{{ i['name'] }}</td>#}
+{#    <td>&nbsp;{{ i['contact_number'] }}</td>#}
+{#    <td><a href="/upp_file/{{ i['user_id'] }}">Upload File</a></td>#}
+{#    <td><a href="/vupp_file/{{ i['user_id'] }}">View File</a></td>#}
+{#  </tr>#}
+{#    {% endfor %}#}
+{#  #}
+{#</table>#}
+
+<tr>
+
+  {% for i in aa %}
+      {% if loop.index%3 ==0 %}
+          <td>
+          <div class="card">
+  <img src="{{ i['upload_image'] }}" alt="John" style="width:100%">
+  <h1>{{ i['name'] }}</h1>
+{#  <p class="title">CEO & Founder, Example</p>#}
+    <p>Age : {{ i['age'] }}</p>
+  <p>Contact no: {{ i['contact_number'] }}</p>
+{#  <a href="#"><i class="fa fa-dribbble"></i></a>#}
+{#  <a href="#"><i class="fa fa-twitter"></i></a>#}
+{#  <a href="#"><i class="fa fa-linkedin"></i></a>#}
+{#  <a href="#"><i class="fa fa-facebook"></i></a>#}
+  <p><a href="/upp_file/{{ i['user_id'] }}" class="btn btn-primary">Upload File</a></p>
+  <p><a href="/vupp_file/{{ i['user_id'] }}" class="btn btn-primary">View File</a></p>
+    <p><a href="/empty_emergency/{{ i['user_id'] }}" class="btn btn-primary">Check-up Complete</a></p>
+
+</div>
+          </td>
+          </tr>
+          <tr>
+          {% else %}
+<td>
+<div class="card">
+  <img src="{{ i['upload_image'] }}" alt="John" style="width:100%">
+  <h1>{{ i['name'] }}</h1>
+{#  <p class="title">CEO & Founder, Example</p>#}
+    <p>Age : {{ i['age'] }}</p>
+  <p>Emergency Contact: {{ i['contact_number'] }}</p>
+{#  <a href="#"><i class="fa fa-dribbble"></i></a>#}
+{#  <a href="#"><i class="fa fa-twitter"></i></a>#}
+{#  <a href="#"><i class="fa fa-linkedin"></i></a>#}
+{#  <a href="#"><i class="fa fa-facebook"></i></a>#}
+  <p><a href="/upp_file/{{ i['user_id'] }}" class="btn btn-primary">Upload File</a></p>
+  <p><a href="/vupp_file/{{ i['user_id'] }}" class="btn btn-primary">View File</a></p>
+    <p><a href="/empty_emergency/{{ i['user_id'] }}" class="btn btn-primary">Check-up Complete</a></p>
+
+</div>
+</td>
+      {% endif %}
+   {% endfor %}
+</tr>
+{% endif %}
+</table>
+</body>
+</html>
+{% endblock %}

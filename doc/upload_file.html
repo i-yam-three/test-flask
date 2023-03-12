@@ -1,0 +1,30 @@
+{% extends 'doc/index-2.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post" enctype="multipart/form-data">
+    <table class="table table-borderless">
+         <tr>
+            <td>File Description</td>
+            <td><input type="text" name="d" required class="form-control" required></td>
+        </tr>
+
+        <tr>
+            <td>Upload file</td>
+            <td><input type="file" name="file" required class="form-control" required></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="UPLOAD FILE" class="btn btn-primary"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+{% endblock %}

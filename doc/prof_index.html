@@ -1,0 +1,76 @@
+{% extends 'doc/index-2.html' %}
+{% block body %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v6 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/static/assets/css1/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/static/assets/css1/style.css"/>
+</head>
+<body class="form-v6">
+	<div class="page-content">
+		<div class="form-v6-content">
+			<div class="form-left">
+
+{#		< img src=" {{ data['doc_image'] }}" alt="form"/>#}
+
+<img src="{{ data['doc_image'] }}" height="100" width="100" alt="form">
+			</div>
+			<form class="form-detail" action="#" method="post">
+				<h2>Doctor Details</h2>
+
+            <table width="120" border="3" class="table table-hover" style="font-size:130%">
+  <tr>
+    <th scope="row">Doctor Name</th>
+    <td> {{ data['dname'] }}</td>
+  </tr>
+
+  <tr>
+    <th scope="row">Hospital Name</th>
+    <td> {{ data['hospital_name'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Department</th>
+    <td>{{ data['department'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Seniority</th>
+    <td>&nbsp;{{ data['seniority'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Contact no</th>
+    <td>&nbsp;{{ data['contact_number'] }}</td>
+  </tr>
+  <tr>
+    <!--<th scope="row">Shift Timings</th>
+    <td>{{ data['shift_timings'] }}&nbsp;</td> -->
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+
+{% extends 'user/index-2.html' %}
+{% block body %}
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="3" class="table table-hover" style="font-size:130%">
+  <tr>
+    <th scope="col">Sl no</th>
+    <th scope="col">Doc Name</th>
+    <th scope="col">Hospital name</th>
+    <th scope="col">Department</th>
+    <th scope="col">Complaint</th>
+    <th scope="col">Complaint Date</th>
+    <th scope="col">Admin Reply</th>
+    <th scope="col"> Reply Date</th> 
+  </tr>
+
+
+     {% for i in aa %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['dname']}}</td>
+    <td>&nbsp;{{ i['hospital_name']}}</td>
+    <td>&nbsp;{{ i['department']}}</td>
+    <td>&nbsp;{{ i['complaint']}}</td>
+    <td>&nbsp;{{ i['complaint_date']}}</td>
+    <td>&nbsp;{{ i['admin_reply']}}</td>
+    <td>&nbsp;{{ i['reply_date']}}</td>
+  </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
+
+{% endblock %}

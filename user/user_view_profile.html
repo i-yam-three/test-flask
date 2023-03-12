@@ -1,0 +1,45 @@
+{% extends 'user/index-2.html' %}
+{% block body %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<table width="200" border="3" class="table table-hover" style="font-size:130%">
+    <tr>
+        <th><img src="{{ data['upload_image'] }}" height="100" width="200"></th>
+    </tr>
+  <tr>
+    <th scope="row">User Name</th>
+    <td>&nbsp;{{ data['name'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Age</th>
+    <td>&nbsp;{{ data['age'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Gender</th>
+    <td>{{ data['gender'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Address</th>
+    <td> {{ data['building_number'] }} <br> {{ data['road_name'] }} <br> {{ data['city']}} <br> {{  data['state'] }} <br> {{ data['pin_code'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Contact no</th>
+    <td> {{ data['contact_number'] }}</td>
+  </tr>
+  <tr>
+    <th scope="row">Mail id</th>
+    <td>{{ data['mail_id'] }}</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+{% endblock %}
